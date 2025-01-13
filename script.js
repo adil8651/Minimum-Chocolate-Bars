@@ -15,6 +15,10 @@ function findLeastChocolate() {
     alert("Please Enter Chocolate Sizes.");
     return;
   }
+  chocolateSizes.sort((a, b) => a - b);
+  if (chocolateSizes[0] < chocolateSizes[1]) {
+    chocolateSizes.reverse();
+  }
 
   let maxEachChocolate = [];
 
