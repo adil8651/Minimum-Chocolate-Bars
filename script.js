@@ -37,12 +37,9 @@ function findLeastChocolate() {
   let reverseMaxEachChocolate = uniqueShortMaxEachChocolate.reverse();
   let maxMaxEach = uniqueShortMaxEachChocolate.splice(
     0,
-    Math.floor(reverseMaxEachChocolate.length / 2)
+    Math.floor(reverseMaxEachChocolate.length / 2) + 1
   );
-  let minMaxEach = uniqueShortMaxEachChocolate.splice(
-    Math.floor(uniqueShortMaxEachChocolate.length / 2) - 1,
-    uniqueShortMaxEachChocolate.length
-  );
+  let minMaxEach = uniqueShortMaxEachChocolate;
   let reverseMinMaxEach = minMaxEach.reverse();
   let allCombination = [];
   for (let i = 0; i < maxMaxEach.length; i++) {
