@@ -24,7 +24,9 @@ function findLeastChocolate() {
       maxEachChocolate.push(chocolateSizes[i] * j);
     }
   }
-  let shortMaxEachChocolate = maxEachChocolate.sort();
+  let shortMaxEachChocolate = maxEachChocolate.sort(function (a, b) {
+    return a - b;
+  });
   let uniqueShortMaxEachChocolate = shortMaxEachChocolate.filter(
     (item, index, array) => array.indexOf(item) == index
   );
