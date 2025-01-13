@@ -7,7 +7,7 @@ function findLeastChocolate() {
     return;
   }
 
-  const chocolateSizes = chocolateSizesInput
+  let chocolateSizes = chocolateSizesInput
     .split(",")
     .map((item) => parseFloat(item.trim()));
 
